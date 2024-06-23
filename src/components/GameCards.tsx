@@ -12,7 +12,7 @@ function GameCards({ game }: Props) {
 
 
   return (
-    <Card width="350px" height="350px" borderRadius={10} overflow="hidden">
+    <Card height="100%">
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
