@@ -6,7 +6,7 @@ import DarkMode from "./DarkModeToggle"
 
 function NavBar() {
   return (
-    <HStack justifyContent='space-between' padding={5}>
+    <HStack justifyContent='space-between' padding={2}>
         <Image src={logo} boxSize="60px"></Image>
         <DarkMode/>
     </HStack>
