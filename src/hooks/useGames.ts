@@ -8,7 +8,9 @@ export interface Platform{
   slug:string
 }
 
-
+export interface Ratings{
+  percent:number
+}
 
 
 export interface Game {
@@ -16,6 +18,7 @@ export interface Game {
     name: string;
     background_image:string
     parent_platforms: {platform:Platform}[]
+    metacritic :number
   }
   
   interface FetchGamesResponse {
