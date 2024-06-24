@@ -24,11 +24,8 @@ function GameGrid() {
             </GameCardContainer>
           ))}
         {data.map((game) => {
-          
-          
-
           return (
-            <GameCardContainer key={game.id} >
+            <GameCardContainer key={game.id}>
               <GameCards key={game.id} game={game} />
             </GameCardContainer>
           );
