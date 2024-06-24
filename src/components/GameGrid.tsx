@@ -13,10 +13,10 @@ interface Props{
 
 function GameGrid({genre}:Props) {
   const { data, error, isLoading } = useGames(genre);
-
+  
   const skeleton = new Array(20).fill(null);
-
-
+  
+  let count = 0
 
 
 
@@ -29,11 +29,12 @@ function GameGrid({genre}:Props) {
         padding={5}
       >
         {isLoading &&
-          skeleton.map((skeleton) => (
-            <GameCardContainer key={skeleton}>
-              <CardSkeleton key={skeleton} />
+          skeleton.map(skeleton => {
+            count++
+            return <GameCardContainer key={skeleton + count}>
+              <CardSkeleton  />
             </GameCardContainer>
-          ))}
+})}
         {data.map((game) => {
           return (
             <GameCardContainer key={game.id}>
