@@ -5,12 +5,14 @@ import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react"
 
 const CardSkeleton =()=> {
   return (
-    <Card height="100%">
-      <Skeleton height="60%" >
-        <CardBody>
-          <SkeletonText></SkeletonText>
-        </CardBody>
-      </Skeleton>
+    <Card height='100%' >
+      <Skeleton />
+      <CardBody display='flex' flexDirection='column' justifyContent='flex-end'>
+          <SkeletonText
+          noOfLines={4} spacing='4'
+          />
+      </CardBody>
+
     </Card>
   )
 }

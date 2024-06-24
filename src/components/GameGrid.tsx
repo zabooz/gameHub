@@ -7,15 +7,15 @@ import GameCardContainer from "./GameCardContainer";
 function GameGrid() {
   const { data, error, isLoading } = useGames();
 
-  const skeleton = [1, 2, 3, 4, 5, 6];
+  const skeleton = new Array(20).fill(null);
 
   return (
     <>
       {error && <Text>error</Text>}
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-        spacing={10}
-        padding={10}
+        spacing={3}
+        padding={5}
       >
         {isLoading &&
           skeleton.map((skeleton) => (
