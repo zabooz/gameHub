@@ -3,11 +3,22 @@ import useGames from "../hooks/useGames";
 import GameCards from "./GameCards";
 import CardSkeleton from "./CardSkeleton";
 import GameCardContainer from "./GameCardContainer";
+import { Genre } from "../hooks/useGenre";
 
-function GameGrid() {
-  const { data, error, isLoading } = useGames();
+interface Props{
+  genre:Genre | null
+}
+
+
+
+function GameGrid({genre}:Props) {
+  const { data, error, isLoading } = useGames(genre);
 
   const skeleton = new Array(20).fill(null);
+
+
+
+
 
   return (
     <>

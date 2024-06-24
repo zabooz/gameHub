@@ -1,4 +1,5 @@
 import useData from "./useData";
+import { Genre } from "./useGenre";
 
 export interface Platform{
   id:number
@@ -13,9 +14,10 @@ export interface Game {
     background_image:string
     parent_platforms: {platform:Platform}[]
     metacritic :number
+    genres:string
   }
   
-const useGames = () => useData<Game>('/games')
+const useGames = (genre:Genre | null) => useData<Game>('/games',{params:{genres:genre?.id}},[genre?.id])
 
 
 
