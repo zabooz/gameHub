@@ -22,7 +22,8 @@ const useGames = (genre:Genre | null,selectedPlatform:Platform | null) =>
   useData<Game>('/games',{
     params:{
       genres:genre?.id,
-      parent_platforms: selectedPlatform?.id
+      parent_platforms: selectedPlatform?.id,
+      page_size: 20
     }},
       [genre?.id,selectedPlatform?.id])
 
