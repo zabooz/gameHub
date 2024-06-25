@@ -36,6 +36,7 @@ function GameGrid({genre}:Props) {
             </GameCardContainer>
 })}
         {data.map((game) => {
+  
           return (
             <GameCardContainer key={game.id}>
               <GameCards key={game.id} game={game} />
