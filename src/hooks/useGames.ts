@@ -15,9 +15,16 @@ export interface Game {
     parent_platforms: {platform:Platform}[]
     metacritic :number
     genres:string
+  
   }
   
-const useGames = (genre:Genre | null) => useData<Game>('/games',{params:{genres:genre?.id}},[genre?.id])
+const useGames = (genre:Genre | null,platform:Platform | null) => 
+  useData<Game>('/games',{
+    params:{
+      genres:genre?.id,
+      platforms: platform
+    }},
+      [genre?.id,platform?.id])
 
 
 
