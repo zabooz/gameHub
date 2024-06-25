@@ -7,13 +7,13 @@ import { Genre } from "../hooks/useGenre";
 
 interface Props{
   genre:Genre | null
-  platform:Platform | null
+  selectedPlatform:Platform | null
 }
 
 
 
-function GameGrid({genre,platform}:Props) {
-  const { data, error, isLoading } = useGames(genre,platform);
+function GameGrid({genre,selectedPlatform}:Props) {
+  const { data, error, isLoading } = useGames(genre,selectedPlatform);
   
   const skeleton = new Array(20).fill(null);
   
