@@ -10,21 +10,22 @@ function SortGames() {
     
 
 
-  return (
-    <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        {"Sort by:"}
-      </MenuButton>
-      <MenuList  >
-        <MenuItem>Relevance</MenuItem>
-        <MenuItem>Date added</MenuItem>
-        <MenuItem>Name</MenuItem>
-        <MenuItem>Release date</MenuItem>
-        <MenuItem>Popularity</MenuItem>
-        <MenuItem>Average rating</MenuItem>
-      </MenuList>
-    </Menu>
-  );
+
+    return (
+        <Menu>
+          <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+            Order by : Relevance
+          </MenuButton>
+          <MenuList>
+            <MenuItem>sdg</MenuItem>
+            <MenuItem>sdg</MenuItem>
+            <MenuItem>sdg</MenuItem>
+            <MenuItem>sdg</MenuItem>
+            <MenuItem>sdg</MenuItem>
+            <MenuItem>twetwet</MenuItem>
+          </MenuList>
+        </Menu>
+      )
 }
 
 export default SortGames;
