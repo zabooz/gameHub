@@ -18,7 +18,7 @@ function GameGrid({gameQuery}:Props) {
   
   let count = 0
 
- 
+
 
   return (
     <>
