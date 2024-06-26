@@ -20,7 +20,7 @@ function SortGames({ onSelectSortOrder, sortOrder }: Props) {
   const currentSortOrder = sortOrders.find(order => order.value === sortOrder)
 
   return (
-    <Menu>
+    <Menu  >
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
         {`Order by: ${currentSortOrder?.label || 'Relevance'}`}
       </MenuButton>

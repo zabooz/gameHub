@@ -41,7 +41,10 @@ function App() {
           </GridItem>
         </Show>
         <GridItem area="main">
-          <HStack spacing={5} paddingLeft={5} my={2}>
+          <HStack spacing={{
+            lg:'5',
+            base:'2'
+          }} paddingLeft={5} my={2}>
             <PlatformList
               onSelectedPlatform={(platform) =>
                 setGameQuery({ ...gameQuery, platform })
@@ -51,7 +54,7 @@ function App() {
             <SortGames
               sortOrder={gameQuery.sortOrder}
               onSelectSortOrder={(sortOrder) =>
-                setGameQuery({ ...gameQuery, sortOrder })
+              setGameQuery({ ...gameQuery, sortOrder })
               }
             />
           </HStack>
