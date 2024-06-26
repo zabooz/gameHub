@@ -3,11 +3,14 @@ import logo from "../assets/logo.webp";
 import DarkMode from "./DarkModeToggle";
 import SearchGames from "./SearchGames";
 
-function NavBar() {
+interface Props{
+  onSearch: (searchText:string) => void
+}
+function NavBar({onSearch} : Props) {
   return (
     <HStack padding={2}>
       <Image src={logo} boxSize="60px"></Image>
-      <SearchGames></SearchGames>
+      <SearchGames onSearch={onSearch}></SearchGames>
       <DarkMode />
     </HStack>
   );

@@ -1,18 +1,34 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { useRef } from "react";
 
-function SearchGames() {
+interface Props{
+    onSearch: (searchText:string) => void
+}
+
+
+function SearchGames( {onSearch}:Props) {
+
+
+   const ref =  useRef<HTMLInputElement>(null)
+
   return (
-    <InputGroup>
-      <InputLeftElement>
-        <SearchIcon></SearchIcon>
-      </InputLeftElement>
-      <Input
-        placeholder="Search games..."
-        borderRadius={20}
-        variant='filled'
-      ></Input>
-    </InputGroup>
+    <form   onSubmit={(e) => {
+        e.preventDefault()
+        if(ref.current) onSearch(ref.current.value)
+    }}>
+        <InputGroup>
+          <InputLeftElement>
+            <SearchIcon></SearchIcon>
+          </InputLeftElement>
+          <Input
+            placeholder="Search games..."
+            borderRadius={20}
+            variant='filled'
+            ref={ref}
+          ></Input>
+        </InputGroup>
+    </form>
   );
 }
 
