@@ -15,3 +15,7 @@ function Ratings({ metacritic }: Props) {
 }
 
 export default Ratings;
+
+
+
+
