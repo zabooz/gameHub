@@ -18,11 +18,10 @@ function GameGrid({gameQuery}:Props) {
   
   let count = 0
 
-
+  if(error) return  <Text>error</Text>
 
   return (
-    <>
-      {error && <Text>error</Text>}
+
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         spacing={6}
@@ -44,7 +43,7 @@ function GameGrid({gameQuery}:Props) {
           );
         })}
       </SimpleGrid>
-    </>
+
   );
 }
 
