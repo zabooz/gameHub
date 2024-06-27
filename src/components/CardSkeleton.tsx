@@ -5,7 +5,7 @@ import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react"
 
 const CardSkeleton =()=> {
   return (
-    <Card height='100%' >
+    <Card height='300px' >
       <Skeleton />
       <CardBody display='flex' flexDirection='column' justifyContent='flex-end'>
           <SkeletonText
